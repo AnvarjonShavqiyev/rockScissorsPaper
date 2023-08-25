@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main__wrapper">
+        <div class="human__side">
+            <h1>Choose your hand</h1>
+            <div class="choose__hands">
+                <input id="rock" class="hands__type" type="radio" name="choosen__hand">
+                <input id="scissors" class="hands__type" type="radio" name="choosen__hand">
+                <input id="paper" class="hands__type" type="radio" name="choosen__hand">
+            </div>
+        </div>
+    </div>
+    <div id="game__board" class="computer__side">
+        <div id="human__hand" class="choosen__hand"></div>
+        <h3>vs</h3>
+        <div id="opposite__hand" class="choosen__hand"></div>
+        <p id="result">Boshladikmi!?</p>
+        <p>Umumiy natija:</p>
+        <span>
+            <p id="me">Sizda: 0</p>
+            <p id="other">Menda: 0</p>
+        </span>
+    </div>
+    <script src="./script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.main__wrapper {
+  margin-right: 300px;
+  .human__side {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 22px;
+      font-family: "Poppins";
+      margin-bottom: 60px;
+    }
+    .choose__hands {
+      display: flex;
+      gap: 18px;
+      .hands__type {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 250px;
+        transition: 0.5s;
+      }
+      .hands__type:checked {
+
+        position: relative;
+      }
+      .hands__type:checked::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: rgb(21, 255, 0);
+      }
+      .hands__type:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+      }
+      #scissors {
+        background-image: url("/images/qaychi.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #rock {
+        background-image: url("/images/tosh.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #paper {
+        background-image: url("/images/qogoz.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+.computer__side{
+  height: 100vh;
+  width: 300px;
+  background-color: rgb(71, 71, 71);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  .choosen__hand {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 190px;
+      height: 190px;
+      border-radius: 12px;
+    }
+  }
+  h3 {
+    font-size: 70px;
+    color: #fff;
+    font-family: "Poppins";
+  }
+  p {
+    font-size: 22px;
+    color: #fff;
+    font-family: "Poppins";
+  }
+  span {
+    display: flex;
+    gap: 20px;
+  }
+}
+.animate__img {
+  animation-name: show;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes show {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
